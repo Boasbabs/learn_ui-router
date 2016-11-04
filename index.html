@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Angular UI-router</title>
-  <!-- CSS by bootstrap  -->
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css" media="screen" title="no title">
-  <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css" media="screen" title="no title">
-  <style media="screen">
-    .navbar { border-radius: 0; }
-  </style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular UI-router</title>
+    <!-- CSS by bootstrap  -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css" media="screen" title="no title">
+    <style media="screen">
+      .navbar { border-radius: 0; }
+    </style>
 
-  <!-- Js files -->
-  <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
-  <script type="text/javascript" src="angular/angular.min.js"></script>
-  <script type="text/javascript" src="angular/angular-ui-router.min.js"></script>
-  <script type="text/javascript" src="angular/angular-animate.min.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+    <!-- Js files -->
+    <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="angular/angular.min.js"></script>
+    <script type="text/javascript" src="angular/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="angular/angular-animate.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 
-</head>
-<body ng-app="routerApp">
-  
-</body>
+  </head>
+  <body ng-app="routerApp">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a ui-sef="home">Home</a></li>
+        <li><a ui-sef="about">About</a></li>
+      </ul>
+    </nav>
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+      <!-- THIS IS WHERE I INJECT MY CONTENT -->
+      <div ui-view></div>
+    </div>
+
+  </body>
 </html>
